@@ -80,8 +80,8 @@ A GitHub Actions workflow is configured in [.github/workflows/docker-publish.yml
 2. **Docker Registry:** Published to Docker Hub at `fxhibon/square-collage-maker`.
 3. **Architectures:** Multi-platform builds configured for `linux/amd64` and `linux/arm64`.
 4. **Security Recommendations:**
-   - Pinning GitHub Actions to exact commit SHAs.
-   - Restricting `GITHUB_TOKEN` permissions to minimum scope (`permissions: contents: read`).
+    - Pinning GitHub Actions to stable major version tags.
+    - Restricting `GITHUB_TOKEN` permissions to minimum scope (`permissions: contents: read`).
    - Caching dependencies securely to prevent vulnerabilities.
 
 ### Required Secrets
