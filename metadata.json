@@ -1,0 +1,6 @@
+{
+  "name": "Square Collage Maker",
+  "description": "Select multiple photos and automatically generate a square photo grid.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
