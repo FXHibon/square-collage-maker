@@ -1,0 +1,23 @@
+# Dependabot configuration file to keep GitHub Actions and npm dependencies up to date
+version: 2
+updates:
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Group updates to reduce PR noise (optional, but recommended)
+    groups:
+      github-actions-dependencies:
+        patterns:
+          - "*"
+
+  # Keep npm packages up to date (package.json)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
