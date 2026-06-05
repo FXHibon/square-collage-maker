@@ -84,8 +84,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           # Push only when not running on a pull request
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ id.meta.outputs.tags }}
-          labels: ${{ id.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           # Enable Buildx cache optimization for faster subsequent builds
           cache-from: type=gha
           cache-to: type=gha,mode=max
