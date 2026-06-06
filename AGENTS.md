@@ -70,13 +70,13 @@ A [Dockerfile](file:///Users/hibonfrancoisxavier/fxhibon/square-collage-maker/Do
 
 ## 🤖 CI/CD & GitHub Actions
 
-A GitHub Actions workflow is configured in [.github/workflows/docker-publish.yml](file:///Users/hibonfrancoisxavier/fxhibon/square-collage-maker/.github/workflows/docker-publish.yml).
+A GitHub Actions workflow is configured in [.github/workflows/ci.yml](file:///Users/hibonfrancoisxavier/fxhibon/square-collage-maker/.github/workflows/ci.yml).
 
 ### Workflow Details
 1. **Triggers:**
-   - On pull requests targeting `master` or `main` (performs local Node build and lint validation).
-   - On pushes to `master` or `main` (builds and publishes the Docker image).
-   - On SemVer tags `v*.*.*` or pre-releases `v*.*.*-*` (builds and publishes tagged Docker image).
+   - On pull requests targeting `master` (performs local Node build and lint validation).
+   - On pushes to `master` (builds and publishes the Docker image).
+   - On SemVer tags `v*` (builds and publishes tagged Docker image).
 2. **Docker Registry:** Published to Docker Hub at `fxhibon/square-collage-maker`.
 3. **Architectures:** Multi-platform builds configured for `linux/amd64` and `linux/arm64`.
 4. **Security Recommendations:**
